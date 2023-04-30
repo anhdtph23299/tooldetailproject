@@ -1,10 +1,10 @@
 var myApp = angular.module("myModule", ["ngRoute"]);
 
-myApp.config(function ($locationProvider, $routeProvider) {
+myApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix("");
   $routeProvider
     .when("/home", {
-      TemplateUrl: "./page/home.html",
+      templateUrl: "./page/home.html",
     })
     .otherwise({
       redirectTo: "/home",

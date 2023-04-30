@@ -1,0 +1,73 @@
+section {
+  margin: 0px 0px 20px 0px;
+}
+/*  */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* thêm một lớp màu đen trong suốt để làm nổi bật chữ */
+}
+
+/* service  */
+.service {
+  background-image: url("/img/group.jpg");
+  min-height: 500px;
+
+  color: aliceblue;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.service .service-body {
+  padding: 30px;
+}
+.service .service-body .service-top {
+  text-align: center;
+}
+.service .service-body .service-detail {
+  border: 1.5px solid #ee0033;
+  border-radius: 10px;
+  margin: 0px 0px 20px 0px;
+}
+.service .service-body .service-detail h5 {
+  text-align: center;
+}
+.service .service-body .service-detail h5 img {
+  padding: 10px;
+}
+.service .service-body .service-detail p {
+  padding: 0px 10px;
+}
+/* .service .service-body .service-detail h5 {
+    text-align: center;
+  } */
+.reason .reason-header {
+  text-align: center;
+}
+.reason .reason-header h3 {
+  padding: 0px 0px 10px 0px;
+}
+.reason .reason-body {
+  padding: 50px 0px;
+}
+.reason .reason-body h1 {
+  color: #ee0033;
+  font-weight: bolder;
+}
+/*  */
+.professional .professional-header {
+  text-align: center;
+}
+
+/*  */
