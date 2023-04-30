@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -12,23 +13,29 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
-
+import java.sql.Date;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "FrameworkProject")
-public class FrameworkProject implements Serializable {
+@Table(name = "ProjectMember")
+public class ProjectMember implements Serializable {
     @EmbeddedId
-    private FrameworkProjectId frameworkProjectId;
+    private ProjectMemberId projectMemberId;
     @ManyToOne
-    @JoinColumn(name = "IDFramework",insertable = false,updatable = false)
-    private Framework framework;
-
-    @ManyToOne
-    @JoinColumn(name = "IDProject",insertable = false,updatable = false)
+    @JoinColumn(name = "IDProject")
     private Project project;
+    @ManyToOne
+    @JoinColumn(name = "IDMember")
+    private Member member;
+    @ManyToOne
+    @JoinColumn(name = "IDRole")
+    private Role role;
+    @Column(name = "StartJoin")
+    private Date startJoin;
+    private String task;
+
 
 }

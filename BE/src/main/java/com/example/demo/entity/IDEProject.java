@@ -19,13 +19,13 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "FrameworkProject")
-public class FrameworkProject implements Serializable {
+@Table(name = "IDEProject")
+public class IDEProject implements Serializable {
     @EmbeddedId
-    private FrameworkProjectId frameworkProjectId;
+    private IDEProjectId ideProjectId;
     @ManyToOne
-    @JoinColumn(name = "IDFramework",insertable = false,updatable = false)
-    private Framework framework;
+    @JoinColumn(name = "IDIDE",insertable = false,updatable = false)
+    private IDE ide;
 
     @ManyToOne
     @JoinColumn(name = "IDProject",insertable = false,updatable = false)

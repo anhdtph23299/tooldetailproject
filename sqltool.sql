@@ -28,6 +28,7 @@ Create table Project(
     `Status` varchar(15) not null,
     StartTime date not null,
     EndTime date,
+	Images LONGBLOB not null,
     `Description` varchar(255) not null,
     IDAccount bigint ,
     foreign key(IDAccount) references `Account`(IDAccount)
