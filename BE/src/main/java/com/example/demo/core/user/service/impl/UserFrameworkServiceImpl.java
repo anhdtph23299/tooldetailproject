@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserFrameworkService implements UserFrameService {
+public class UserFrameworkServiceImpl implements UserFrameService {
 
     @Autowired
     private UserFrameworkRepository userFrameworkRepository;
