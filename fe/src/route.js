@@ -6,8 +6,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/home", {
       templateUrl: "./page/home.html",
     })
-
+    .when("/detail", {
+      templateUrl: "./page/detailproject.html",
+    })
     .otherwise({
-      redirectTo: "/home",
+      redirectTo: "/detail",
     });
 });
