@@ -1,10 +1,9 @@
 package com.example.demo.core.user.controller;
 
+import com.example.demo.core.common.base.ResponseObject;
 import com.example.demo.core.user.model.request.UserFramworkRequest;
 import com.example.demo.core.user.service.impl.UserFrameworkServiceImpl;
-import com.example.demo.entity.Framework;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +17,8 @@ public class UserFrameworkController {
     private UserFrameworkServiceImpl userFrameworkServiceImpl;
 
     @PostMapping("add")
-    public ResponseEntity<Framework> add(@RequestBody UserFramworkRequest request){
-       return ResponseEntity.ok(userFrameworkServiceImpl.addFrameWork(request));
+    public ResponseObject add(@RequestBody UserFramworkRequest request){
+       return new ResponseObject(userFrameworkServiceImpl.addFrameWork(request));
     }
 
 }
