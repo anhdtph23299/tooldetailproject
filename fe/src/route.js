@@ -9,7 +9,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/detail", {
       templateUrl: "./page/detailproject.html",
     })
+    .when("/listProject", {
+      templateUrl: "./page/listproject.html",
+    })
     .otherwise({
-      redirectTo: "/detail",
+      redirectTo: "/listProject",
     });
 });
