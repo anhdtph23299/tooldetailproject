@@ -7,6 +7,8 @@ import com.example.demo.entity.Framework;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserFrameworkServiceImpl implements UserFrameService {
 
@@ -17,5 +19,10 @@ public class UserFrameworkServiceImpl implements UserFrameService {
         Framework framework = new Framework();
         framework.setFrameworkName(request.getName());
         return userFrameworkRepository.save(framework);
+    }
+
+    @Override
+    public List<Framework> getAll() {
+        return userFrameworkRepository.findAll();
     }
 }

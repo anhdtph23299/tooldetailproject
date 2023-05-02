@@ -27,7 +27,6 @@ public class Framework implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFramework;
-    @Column(name = "FrameworkName")
     private String frameworkName;
     @OneToMany(mappedBy = "framework")
     private List<FrameworkProject> frameworkProjects;

@@ -17,9 +17,9 @@ import java.io.Serializable;
 @ToString
 @Embeddable
 public class FrameworkProjectId  implements Serializable {
-    @JoinColumn(name = "idFramework")
+    @JoinColumn(name = "id_framework")
     private Long idFramework;
-    @JoinColumn(name = "idProject")
+    @JoinColumn(name = "id_project")
     private Long idProject;
 
 }

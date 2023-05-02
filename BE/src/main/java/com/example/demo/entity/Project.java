@@ -31,9 +31,7 @@ public class Project implements Serializable {
     @Column(name = "ProjectName")
     private String projectName;
     private String status;
-    @Column(name = "StartTime")
     private Date startTime;
-    @Column(name = "EndTime")
     private Date endTime;
     private Byte[] images;
     private String description;

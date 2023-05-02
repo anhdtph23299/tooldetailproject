@@ -24,11 +24,11 @@ public class IDEProject implements Serializable {
     @EmbeddedId
     private IDEProjectId ideProjectId;
     @ManyToOne
-    @JoinColumn(name = "IDIDE",insertable = false,updatable = false)
+    @JoinColumn(name = "idIDE",insertable = false,updatable = false)
     private IDE ide;
 
     @ManyToOne
-    @JoinColumn(name = "IDProject",insertable = false,updatable = false)
+    @JoinColumn(name = "idProject", insertable = false,updatable = false)
     private Project project;
 
 }
