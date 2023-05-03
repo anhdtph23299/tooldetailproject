@@ -13,6 +13,6 @@ myApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: "./page/listproject.html",
     })
     .otherwise({
-      redirectTo: "/listProject",
+      redirectTo: "/home",
     });
 });
