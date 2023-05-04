@@ -24,11 +24,11 @@ public class FrameworkProject implements Serializable {
     @EmbeddedId
     private FrameworkProjectId frameworkProjectId;
     @ManyToOne
-    @JoinColumn(name = "idFramework",insertable = false,updatable = false)
+    @JoinColumn(name = "id_framework",insertable = false,updatable = false)
     private Framework framework;
 
     @ManyToOne
-    @JoinColumn(name = "idProject",insertable = false,updatable = false)
+    @JoinColumn(name = "id_project",insertable = false,updatable = false)
     private Project project;
 
 }

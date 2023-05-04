@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -19,11 +20,11 @@ import java.io.Serializable;
 @Setter
 @Embeddable
 public class ProjectMemberId implements Serializable {
-    @JoinColumn(name = "IDProject")
+    @Column(name = "id_project")
     private Long idProject;
-    @JoinColumn(name = "IDMember")
+    @Column(name = "id_member")
     private Long idMember;
-    @JoinColumn(name = "IDRole")
+    @Column(name = "id_role")
     private Long idRole;
 
 }

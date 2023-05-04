@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserProjectRepository extends ProjectRepository {
-    @Query(value = "select pr from Project pr where pr.idProject=:id")
+    @Query(value = "select pr from Project pr where pr.id=:id")
     UserFindProjectResponse findProjectById(@Param("id")String id);
 }

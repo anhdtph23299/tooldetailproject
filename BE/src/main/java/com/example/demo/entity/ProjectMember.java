@@ -25,13 +25,13 @@ public class ProjectMember implements Serializable {
     @EmbeddedId
     private ProjectMemberId projectMemberId;
     @ManyToOne
-    @JoinColumn(name = "idProject",insertable = false,updatable = false)
+    @JoinColumn(name = "id_project",insertable = false,updatable = false)
     private Project project;
     @ManyToOne
-    @JoinColumn(name = "idMember",insertable = false,updatable = false)
+    @JoinColumn(name = "id_member",insertable = false,updatable = false)
     private Member member;
     @ManyToOne
-    @JoinColumn(name = "idRole",insertable = false,updatable = false)
+    @JoinColumn(name = "id_role",insertable = false,updatable = false)
     private Role role;
     private Date startJoin;
     private String task;

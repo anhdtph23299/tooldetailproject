@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.entity.base.PrimaryEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.List;
 
 @ToString
@@ -22,10 +24,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "Role")
-public class Role {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idRole;
+public class Role extends PrimaryEntity implements Serializable {
     @Column(name = "RoleName")
     private String roleName;
     private String description;

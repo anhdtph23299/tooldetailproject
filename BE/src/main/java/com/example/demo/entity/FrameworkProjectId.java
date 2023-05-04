@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import lombok.AllArgsConstructor;
@@ -17,9 +18,9 @@ import java.io.Serializable;
 @ToString
 @Embeddable
 public class FrameworkProjectId  implements Serializable {
-    @JoinColumn(name = "id_framework")
-    private Long idFramework;
-    @JoinColumn(name = "id_project")
-    private Long idProject;
+    @Column(name = "id_framework")
+    private Long frameworkId;
+    @Column(name = "id_project")
+    private Long projectId;
 
 }

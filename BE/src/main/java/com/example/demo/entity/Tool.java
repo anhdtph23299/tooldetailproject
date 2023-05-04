@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.entity.base.PrimaryEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,10 +24,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "Tool")
-public class Tool implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTool;
+public class Tool extends PrimaryEntity implements Serializable {
     @Column(name = "ToolName")
     private String toolName;
     @OneToMany(mappedBy = "tool")

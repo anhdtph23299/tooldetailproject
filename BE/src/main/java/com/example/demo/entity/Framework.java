@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.entity.base.PrimaryEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,10 +24,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "Framework")
-public class Framework implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idFramework;
+public class Framework extends PrimaryEntity implements Serializable {
     private String frameworkName;
     @OneToMany(mappedBy = "framework")
     private List<FrameworkProject> frameworkProjects;
