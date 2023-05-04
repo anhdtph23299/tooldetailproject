@@ -26,8 +26,9 @@ import java.util.List;
 public class IDE implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idIDE;
-    @Column(name = "IDEName")
+    @Column(name = "id_ide")
+    private Long idIde;
+    @Column(name = "ide_name")
     private String ideName;
     @OneToMany(mappedBy = "ide")
     private List<IDEProject> listIdeProjects;

@@ -9,8 +9,8 @@ Create table `Account`(
     `Name` varchar(100) not null,
     Email varchar(30) not null,
     Phone varchar(15) not null,
-    Username varchar(20) not null,
-    Passwork varchar(20) not null
+    user_name varchar(20) not null,
+    pass_work varchar(20) not null
 );
 Create table `Role`(
 	id_role bigint not null auto_increment primary key,
@@ -29,7 +29,7 @@ Create table Project(
     start_time date not null,
     end_time date,
     images LONGBLOB not null,
-    `Description` varchar(1000) not null,
+    `Description` varchar(255) not null,
     id_account bigint ,
     foreign key(id_account) references `Account`(id_account)
 );
@@ -44,7 +44,7 @@ Create table ProjectMember(
 	id_project bigint not null,
     id_member bigint not null,
     id_role bigint not null,
-    StartJoin Date ,
+    start_join Date ,
     Task varchar(255),
     foreign key(id_project) references Project(id_project),
     foreign key(id_member) references `Member`(id_member),

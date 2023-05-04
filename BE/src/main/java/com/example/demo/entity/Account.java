@@ -24,12 +24,10 @@ import java.io.Serializable;
 public class Account implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IDAccount")
     private Long idAccount;
     private String name;
     private String email;
     private String phone;
-    @Column(name = "Username")
     private String userName;
     private String passwork;
 

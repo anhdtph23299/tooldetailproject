@@ -25,11 +25,9 @@ import java.util.List;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idRole;
+    private Long idMember;
 
-    @Column(name = "MemberCode")
     private String memberCode;
-    @Column(name = "MemberName")
     private String memberName;
     @OneToMany(mappedBy = "member")
     private List<ProjectMember> listProjectMember;

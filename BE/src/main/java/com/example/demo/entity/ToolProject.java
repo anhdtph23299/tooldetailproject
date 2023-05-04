@@ -19,7 +19,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "ToolProject")
+@Table(name = "toolproject")
 public class ToolProject implements Serializable {
     @EmbeddedId
     private ToolProjectId toolProjectId;

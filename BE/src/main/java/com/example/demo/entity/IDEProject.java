@@ -19,16 +19,16 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "IDEProject")
+@Table(name = "ideproject")
 public class IDEProject implements Serializable {
     @EmbeddedId
     private IDEProjectId ideProjectId;
     @ManyToOne
-    @JoinColumn(name = "idIDE",insertable = false,updatable = false)
+    @JoinColumn(name = "id_ide",insertable = false,updatable = false)
     private IDE ide;
 
     @ManyToOne
-    @JoinColumn(name = "idProject", insertable = false,updatable = false)
+    @JoinColumn(name = "id_project",insertable = false,updatable = false)
     private Project project;
 
 }

@@ -28,7 +28,6 @@ public class Project implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProject;
-    @Column(name = "ProjectName")
     private String projectName;
     private String status;
     private Date startTime;
@@ -36,7 +35,7 @@ public class Project implements Serializable {
     private Byte[] images;
     private String description;
     @OneToMany(mappedBy = "project")
-    private List<FrameworkProject> frameworkProjects;
+    private List<FrameworkProject> listFrameworkProject;
     @OneToMany(mappedBy = "project")
     private List<IDEProject> listIdeProjects;
     @OneToMany(mappedBy = "project")

@@ -20,7 +20,7 @@ import java.sql.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "ProjectMember")
+@Table(name = "projectmember")
 public class ProjectMember implements Serializable {
     @EmbeddedId
     private ProjectMemberId projectMemberId;
@@ -33,7 +33,6 @@ public class ProjectMember implements Serializable {
     @ManyToOne
     @JoinColumn(name = "idRole",insertable = false,updatable = false)
     private Role role;
-    @Column(name = "StartJoin")
     private Date startJoin;
     private String task;
 

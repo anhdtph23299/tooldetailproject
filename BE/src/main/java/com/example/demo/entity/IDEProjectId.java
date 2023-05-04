@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import lombok.AllArgsConstructor;
@@ -17,8 +18,8 @@ import java.io.Serializable;
 @ToString
 @Embeddable
 public class IDEProjectId implements Serializable {
-    @JoinColumn(name = "IDIDE")
-    private Long idIDE;
-    @JoinColumn(name = "IDProject")
+    @Column(name = "id_ide")
+    private Long idIde;
+    @Column(name = "id_project")
     private Long idProject;
 }

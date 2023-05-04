@@ -2,6 +2,7 @@ package com.example.demo.core.user.controller;
 
 import com.example.demo.core.common.base.ResponseObject;
 import com.example.demo.core.user.model.request.UserFramworkRequest;
+import com.example.demo.core.user.model.response.UserFrameworkResponse;
 import com.example.demo.core.user.service.impl.UserFrameworkServiceImpl;
 import com.example.demo.entity.Framework;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class UserFrameworkController {
        return new ResponseObject(userFrameworkServiceImpl.addFrameWork(request));
     }
     @GetMapping("getall")
-    public List<Framework> getAll(){
+    public List<UserFrameworkResponse> getAll(){
        return userFrameworkServiceImpl.getAll();
     }
 

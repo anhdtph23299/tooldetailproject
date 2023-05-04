@@ -1,6 +1,7 @@
 package com.example.demo.core.user.service.impl;
 
 import com.example.demo.core.user.model.request.UserFramworkRequest;
+import com.example.demo.core.user.model.response.UserFrameworkResponse;
 import com.example.demo.core.user.repository.UserFrameworkRepository;
 import com.example.demo.core.user.service.UserFrameService;
 import com.example.demo.entity.Framework;
@@ -22,7 +23,7 @@ public class UserFrameworkServiceImpl implements UserFrameService {
     }
 
     @Override
-    public List<Framework> getAll() {
-        return userFrameworkRepository.findAll();
+    public List<UserFrameworkResponse> getAll() {
+        return userFrameworkRepository.getAllFramework();
     }
 }
