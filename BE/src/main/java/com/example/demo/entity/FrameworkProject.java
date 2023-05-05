@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -25,10 +26,12 @@ public class FrameworkProject implements Serializable {
     private FrameworkProjectId frameworkProjectId;
     @ManyToOne
     @JoinColumn(name = "id_framework",insertable = false,updatable = false)
+    @JsonBackReference
     private Framework framework;
 
     @ManyToOne
     @JoinColumn(name = "id_project",insertable = false,updatable = false)
+    @JsonBackReference
     private Project project;
 
 }

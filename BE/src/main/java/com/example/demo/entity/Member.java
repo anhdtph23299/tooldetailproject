@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +29,7 @@ public class Member extends PrimaryEntity {
     private String memberCode;
     private String memberName;
     @OneToMany(mappedBy = "member")
+    @JsonManagedReference
     private List<ProjectMember> listProjectMember;
 
 }

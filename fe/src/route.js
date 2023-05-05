@@ -6,8 +6,9 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/home", {
       templateUrl: "./page/home.html",
     })
-    .when("/detail", {
+    .when("/detail/:id", {
       templateUrl: "./page/detailproject.html",
+      controller: detailController,
     })
     .when("/listProject", {
       templateUrl: "./page/listproject.html",
