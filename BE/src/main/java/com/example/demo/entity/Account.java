@@ -3,9 +3,6 @@ package com.example.demo.entity;
 import com.example.demo.entity.base.PrimaryEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +24,8 @@ public class Account extends PrimaryEntity implements Serializable {
     private String email;
     private String phone;
     private String userName;
+
+    @Column(name = "pass_work")
     private String passwork;
 
 }
