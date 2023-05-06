@@ -32,8 +32,7 @@ Create table Project(
     start_time date not null,
     end_time date,
     images LONGBLOB null,
-    `Description` varchar(255) not null,
-    id_account bigint
+    `Description` varchar(255) not null
 );
 Create table FrameworkProject(
 	id_framework bigint not null,
