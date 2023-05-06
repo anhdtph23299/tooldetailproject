@@ -10,10 +10,10 @@ Create table `Account`(
     Email varchar(30) not null,
     Phone varchar(15) not null,
     user_name varchar(20) not null,
-    pass_work varchar(20) not null,
+    password varchar(20) not null,
     roll INT not null
 );
--- account 
+
 
 Create table `Role`(
 	id bigint not null auto_increment primary key,
@@ -33,8 +33,7 @@ Create table Project(
     end_time date,
     images LONGBLOB null,
     `Description` varchar(255) not null,
-    id_account bigint ,
-    foreign key(id_account) references `Account`(id)
+    id_account bigint
 );
 Create table FrameworkProject(
 	id_framework bigint not null,
@@ -75,4 +74,14 @@ Create table IDEProject(
     foreign key(id_ide) references IDE(id),
 	foreign key(id_project) references Project(id),
     primary key(id_project,id_ide)
+);
+
+-- account 
+CREATE TABLE `account_project` (
+   id_account bigint NOT NULL auto_increment primary key,
+   id_project bigint NOT NULL,
+   description VARCHAR(45) NOT NULL,
+   edit_time DATE NOT NULL,
+	foreign key(id_account) references `Account`(id),
+	foreign key(id_project) references `Project`(id)
 );
