@@ -10,8 +10,11 @@ Create table `Account`(
     Email varchar(30) not null,
     Phone varchar(15) not null,
     user_name varchar(20) not null,
-    pass_work varchar(20) not null
+    pass_work varchar(20) not null,
+    roll INT not null
 );
+-- account 
+
 Create table `Role`(
 	id bigint not null auto_increment primary key,
     role_name varchar(100) not null,

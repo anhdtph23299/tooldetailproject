@@ -24,8 +24,6 @@ public class Account extends PrimaryEntity implements Serializable {
     private String email;
     private String phone;
     private String userName;
-
-    @Column(name = "pass_work")
-    private String passwork;
+    private String password;
 
 }
