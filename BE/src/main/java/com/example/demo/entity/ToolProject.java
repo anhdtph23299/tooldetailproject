@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -23,15 +25,18 @@ import java.io.Serializable;
 @Table(name = "toolproject")
 public class ToolProject implements Serializable {
     @EmbeddedId
+    @JsonIgnore
     private ToolProjectId toolProjectId;
     @ManyToOne
     @JoinColumn(name = "id_tool",insertable = false,updatable = false)
-    @JsonBackReference
+//    @JsonBackReference
+    @JsonIgnoreProperties("listToolProject")
     private Tool tool;
 
     @ManyToOne
     @JoinColumn(name = "id_project",insertable = false,updatable = false)
-    @JsonBackReference
+//    @JsonBackReference
+    @JsonIgnoreProperties("listToolProject")
     private Project project;
 
 }

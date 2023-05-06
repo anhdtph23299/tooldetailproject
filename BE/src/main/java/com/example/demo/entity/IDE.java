@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,7 +27,8 @@ public class IDE extends PrimaryEntity implements Serializable {
     @Column(name = "ide_name")
     private String ideName;
     @OneToMany(mappedBy = "ide")
-    @JsonManagedReference
-    private List<IDEProject> listIdeProjects;
+//    @JsonManagedReference
+    @JsonIgnoreProperties("ide")
+    private List<IDEProject> listIdeProject;
 
 }

@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,11 +27,13 @@ import java.util.List;
 @Entity
 @Table(name = "Role")
 public class Role extends PrimaryEntity implements Serializable {
-    @Column(name = "RoleName")
+
     private String roleName;
+
     private String description;
     @OneToMany(mappedBy = "role")
-    @JsonManagedReference
+//    @JsonManagedReference
+    @JsonIgnoreProperties("role")
     private List<ProjectMember> listProjectMember;
 
 }

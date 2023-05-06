@@ -14,4 +14,5 @@ public class UserProjectServiceImpl implements UserProjectService {
     public UserFindProjectResponse findProjectById(String id) {
         return userProjectRepository.findProjectById(id);
     }
+
 }

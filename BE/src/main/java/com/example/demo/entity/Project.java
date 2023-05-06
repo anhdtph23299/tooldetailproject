@@ -2,6 +2,8 @@ package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
 import com.example.demo.entity.base.Status;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,16 +37,20 @@ public class Project extends PrimaryEntity implements Serializable {
     private Byte[] images;
     private String description;
     @OneToMany(mappedBy = "project")
-    @JsonManagedReference
+//    @JsonManagedReference
+    @JsonIgnoreProperties("project")
     private List<FrameworkProject> listFrameworkProject;
     @OneToMany(mappedBy = "project")
-    @JsonManagedReference
-    private List<IDEProject> listIdeProjects;
+//    @JsonManagedReference
+    @JsonIgnoreProperties("project")
+    private List<IDEProject> listIdeProject;
     @OneToMany(mappedBy = "project")
-    @JsonManagedReference
+//    @JsonManagedReference
+    @JsonIgnoreProperties("project")
     private List<ProjectMember> listProjectMember;
     @OneToMany(mappedBy = "project")
-    @JsonManagedReference
+//    @JsonManagedReference
+    @JsonIgnoreProperties("project")
     private List<ToolProject> listToolProject;
 
 //    public void setStatus(String status) {

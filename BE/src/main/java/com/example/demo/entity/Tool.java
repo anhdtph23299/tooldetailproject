@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,7 +30,8 @@ public class Tool extends PrimaryEntity implements Serializable {
     @Column(name = "ToolName")
     private String toolName;
     @OneToMany(mappedBy = "tool")
-    @JsonManagedReference
+//    @JsonManagedReference
+    @JsonIgnoreProperties("tool")
     private List<ToolProject> listToolProject;
 
 }

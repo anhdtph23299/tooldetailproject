@@ -1,5 +1,6 @@
 package com.example.demo.entity.base;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,5 +14,6 @@ import lombok.Setter;
 public class PrimaryEntity implements IsIdentified{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 }

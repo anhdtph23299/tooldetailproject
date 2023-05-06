@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.example.demo.entity.base.PrimaryEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -23,7 +24,9 @@ import java.util.List;
 @Table(name = "Framework")
 public class Framework extends PrimaryEntity implements Serializable {
     private String frameworkName;
+
     @OneToMany(mappedBy = "framework")
-    @JsonManagedReference
-    private List<FrameworkProject> frameworkProjects;
+//    @JsonManagedReference
+    @JsonIgnoreProperties("framework")
+    private List<FrameworkProject> listFrameworkProject;
 }
