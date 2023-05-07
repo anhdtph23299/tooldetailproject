@@ -13,7 +13,13 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/listProject", {
       templateUrl: "./page/listproject.html",
     })
+    .when("/login", {
+      templateUrl: "./page/login.html",
+    })
+    .when("/admin", {
+      templateUrl: "./page/admin.html",
+    })
     .otherwise({
-      redirectTo: "/home",
+      redirectTo: "/admin",
     });
 });
